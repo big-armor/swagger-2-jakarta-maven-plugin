@@ -32,11 +32,12 @@ public class VendorExtensionWithoutReader extends AbstractSwaggerExtension {
             value.setDescription(RESPONSE_DESCRIPTION);
             map.put(RESPONSE_STATUS_501, value);
             operation.setResponses(map);
+            operation.addResponse(RESPONSE_STATUS_501, value);
         }
 
         if (chain.hasNext()) {
             chain.next().decorateOperation(operation, method, chain);
         }
     }
-    
+
 }

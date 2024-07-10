@@ -437,6 +437,7 @@ public abstract class AbstractReader {
             //technically should not be possible at this point, added to be safe
             if (responses != null) {
                 responses.remove("200");
+                operation.getResponsesObject().remove("200");
             }
         }
     }

@@ -323,6 +323,7 @@ public class SpringMvcApiReader extends AbstractReader implements ClassSwaggerRe
         if (operation.getResponses() != null && operation.getResponses().size() == 1) {
             String currentKey = operation.getResponses().keySet().iterator().next();
             Response oldResponse = operation.getResponses().remove(currentKey);
+            operation.getResponsesObject().remove(currentKey);
             if (StringUtils.isNotEmpty(reason)) {
                 oldResponse.setDescription(reason);
             }

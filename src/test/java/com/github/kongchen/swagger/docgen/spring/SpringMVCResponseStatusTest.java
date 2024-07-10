@@ -69,7 +69,7 @@ public class SpringMVCResponseStatusTest {
 
     @Test
     public void testAPIResponse() throws GenerateException {
-        testMethod("/getString_ApiResponse_202_409", HttpMethod.GET,
+         testMethod("/getString_ApiResponse_202_409", HttpMethod.GET,
               ImmutableMap.of(
                     HttpStatus.ACCEPTED,
                     new Response().description(ACCEPTED_OPERATION_DESCRIPTION).responseSchema(RETURN_TYPE_STRING),

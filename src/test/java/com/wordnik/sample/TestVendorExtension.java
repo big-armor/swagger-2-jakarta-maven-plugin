@@ -35,6 +35,7 @@ public class TestVendorExtension extends AbstractSwaggerExtension {
             value.setDescription(RESPONSE_DESCRIPTION);
             map.put(RESPONSE_STATUS_401, value);
             operation.setResponses(map);
+            operation.addResponse(RESPONSE_STATUS_401, value);
         }
 
         if (chain.hasNext()) {
